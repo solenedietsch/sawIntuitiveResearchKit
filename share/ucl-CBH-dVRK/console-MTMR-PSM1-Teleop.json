@@ -2,38 +2,34 @@
 {
     "io":
     {
-        "footpedals": "sawRobotIO1394-MTMR-foot-pedals.xml"
+        "footpedals": "io/sawRobotIO1394-MTML-foot-pedals.xml"
     },
     "arms":
     [
         {
             "name": "PSM1",
             "type": "PSM",
-            "io": "sawRobotIO1394-PSM1-26782.xml",
-            "pid": "sawControllersPID-PSM.xml",
-            "kinematic": "psm-pro-grasp.json",
+            "serial": "26782",
             "base-frame": {
-             "reference-frame": "ECM",
-            "transform":    [[  -0.9575572771,  -0.1482160908, -0.2472166085, -0.20],
-                              [  -0.1976926041,  0.9618595006, 0.1890606660, 0.0 ],
-                              [  0.2097658107,  0.2299093117, -0.9503367893, 0.0 ],
-                              [  0.0,  0.0,          0.0,          1.0 ]]
-        }
+                "reference-frame": "ECM",
+                "transform":    [[  -0.9575572771,  -0.1482160908, -0.2472166085, -0.20],
+                                 [  -0.1976926041,   0.9618595006,  0.1890606660,  0.0 ],
+                                 [  0.2097658107,    0.2299093117, -0.9503367893,  0.0 ],
+                                 [  0.0,             0.0,           0.0,           1.0 ]]
+            }
         }
         ,
         {
             "name": "MTMR",
             "type": "MTM",
-            "io": "sawRobotIO1394-MTMR-81503.xml",
-            "pid": "sawControllersPID-MTMR.xml",
-            "arm": "MTMR-81503.json",
+            "serial": "81503",
             "base-frame": {
                 "reference-frame": "HRSV",
                 "transform": [[ -1.0,  0.0,          0.0,         -0.180],
                               [  0.0,  0.866025404,  0.5,          0.400],
                               [  0.0,  0.5,         -0.866025404,  0.475],
-                              [  0.0,  0.0,          0.0,          1.0]]
-        }
+                              [  0.0,  0.0,          0.0,          1.0  ]]
+            }
         }
     ]
     ,
@@ -41,15 +37,8 @@
     "psm-teleops":
     [
         {
-            "master": "MTMR",
-            "slave": "PSM1",
-            "configure-parameter": {
-            "ignore-jaw": false,
-            "scale": 0.4,
-            "rotation" : [[-1.0000,  0.0000,  0.0000],
-                          [ 0.0000, -1.0000,  0.0000],
-                          [ 0.0000,  0.0000,  1.0000]]
-            }
+            "mtm": "MTMR",
+            "psm": "PSM1"
         }
     ]
 }

@@ -13,7 +13,7 @@
          </Encoder>
          <AnalogIn>
             <BitsToVolts Offset="0" Scale="6.86646e-05"/>
-            <VoltsToPosSI Offset="481.026555" Scale="-155.732081" Unit="deg"/>
+            <VoltsToPosSI Offset="213.876371" Scale="-57.400822" Unit="deg"/>
          </AnalogIn>
       </Actuator>
    </Robot>
