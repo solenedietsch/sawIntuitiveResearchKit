@@ -1,0 +1,22 @@
+<launch>
+	<node pkg="rostopic" type="rostopic" name="SUJ_ECM" args="pub /SUJ/ECM/move_jp sensor_msgs/JointState '{header:{seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''},
+	name: [''], 
+	position: [0.0, -0.175, 0.873, 2.793, 0.0, 0.0],
+	velocity: [0], 
+	effort: [0]}'" 
+	output="screen"/>
+	
+	<node pkg="rostopic" type="rostopic" name="SUJ_PSM1" args="pub /SUJ/PSM1/move_jp sensor_msgs/JointState '{header:{seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''},
+	name: [''], 
+	position: [0.0, -0.218, -1.309, -1.134, 0.087, 1.484],
+	velocity: [0], 
+	effort: [0]}'" 
+	output="screen"/>
+	
+	<node pkg="rostopic" type="rostopic" name="SUJ_PSM3" args="pub /SUJ/PSM3/move_jp sensor_msgs/JointState '{header:{seq: 0, stamp: {secs: 0, nsecs: 0}, frame_id: ''},
+	name: [''], 
+	position: [0.0, -1.396, 1.658, 1.134, 0.0, -0.96],
+	velocity: [0], 
+	effort: [0]}'" 
+	output="screen"/>
+</launch>
