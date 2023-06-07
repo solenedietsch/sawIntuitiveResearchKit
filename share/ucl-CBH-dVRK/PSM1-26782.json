@@ -4,5 +4,6 @@
     //"tool-detection": "AUTOMATIC"
     //"tool-detection": "MANUAL"
     "tool-detection": "FIXED",
-    "tool": "LARGE_NEEDLE_DRIVER:420006[12]"
+    //"tool": "LARGE_NEEDLE_DRIVER:400006"
+    "tool": "PROGRASP_FORCEPS:400093"
 }
